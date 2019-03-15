@@ -1,0 +1,36 @@
+<div class="card">
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+    </div>
+  </div>
+  <div class="table-responsive">
+    <table class="table" *ngIf='listOfUsers && listOfUsers.length'>
+      <thead>
+      <tr>
+        <th> Name </th>
+        <th> Email </th>
+        <th> Company Name </th>
+        <th> Address </th>
+        <th> phone </th>
+        <th> website</th>
+      </tr>
+      <tr *ngFor='let x of listOfUsers'>
+        <td>{{x.name}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.company.name}}</td>
+        <td>{{x.address | getAddress: '' }}</td>
+        <td>{{x.phone}}</td>
+        <td>{{x.website}}</td>
+      </tr>
+      </thead>
+    </table>
+  </div>
+
+</div>
