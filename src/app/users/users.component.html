@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="table-responsive">
-    <table class="table" *ngIf='listOfUsers && listOfUsers.length'>
+    <table class="table" *ngIf='(listOfUsers | async)'>
       <thead>
       <tr>
         <th> Name </th>
@@ -21,7 +21,7 @@
         <th> phone </th>
         <th> website</th>
       </tr>
-      <tr *ngFor='let x of listOfUsers'>
+      <tr *ngFor='let x of listOfUsers | async'>
         <td>{{x.name}}</td>
         <td>{{x.email}}</td>
         <td>{{x.company.name}}</td>
