@@ -14,6 +14,9 @@ export class UsersComponent  {
   errorMessage: string;
 
   constructor(public userDataService: DataService) {
+    this.listOfUsers = userDataService
+      .getUserData('https://jsonplaceholder.typicode.com/users')
+      .pipe();
   }
 
 }
