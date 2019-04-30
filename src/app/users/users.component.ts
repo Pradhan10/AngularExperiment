@@ -3,7 +3,7 @@ import {Component, OnInit} from '@angular/core';
 /*Local and 3rd party imports*/
 import {UserDataType} from '../user/user';
 import {DataService} from '../data/data.service';
-import {Observable} from "rxjs";
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-users',
